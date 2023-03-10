@@ -40,8 +40,8 @@ function f(e) {
 setInterval(() => { 
     tx += xv
     ty += yv
-    if (tx + 160 > xm) xv = -xv
-    if (tx < 0) xv = -xv
+    if (tx + 160 > xm || tx < 0) xv = -xv
+    if (ty + 160 > ym || ty < 0) yv = -yv
     tank.style.top = `${ty}px`
     tank.style.left = `${tx}px`
 }, 100)
