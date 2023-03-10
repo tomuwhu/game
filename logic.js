@@ -9,5 +9,5 @@ window.addEventListener("load", e => {
 function f(e) {
     x=e.target.getAttribute("src")
     v=x.split(".")[0].substring(5)
-    document.getElementById("b1").innerHTML = `<img src="${x}"><br>`+nevek[v]
+    document.getElementById("b1").innerHTML = `<a href="game/"><img src="${x}"></a><br>`+nevek[v]
 }
