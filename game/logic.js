@@ -1,47 +1,47 @@
-xm = window.innerWidth
-ym = window.innerHeight
-tx = xm / 2 - 50
-ty = ym - 150
-xv = 0
-yv = 0
-speed = 50
+xm = window.innerWidth;
+ym = window.innerHeight;
+tx = xm / 2 - 50;
+ty = ym - 150;
+xv = 0;
+yv = 0;
+speed = 50;
 function start(b) {
-    b.style.display = "none"
-    tank = document.getElementById("tank")
-    tank.style.display = "inline-block"
-    tank.style.position = "fixed"
-    tank.style.top = `${ty}px`
-    tank.style.left = `${tx}px`
+    b.style.display = "none";
+    tank = document.getElementById("tank");
+    tank.style.display = "inline-block";
+    tank.style.position = "fixed";
+    tank.style.top = `${ty}px`;
+    tank.style.left = `${tx}px`;
 }
 function f(e) {
     switch (e.key) {
         case "ArrowRight":
-            xv = speed
-            yv = 0
-            break
+            xv = speed;
+            yv = 0;
+            break;
         case "ArrowLeft":
-            xv = -speed
-            yv = 0
-            break
+            xv = -speed;
+            yv = 0;
+            break;
         case "ArrowUp":
-            yv = -speed
-            xv = 0
+            yv = -speed;
+            xv = 0;
             break
         case "ArrowDown":
-            yv = speed
-            xv = 0
+            yv = speed;
+            xv = 0;
             break
         case " ":
-            xv = 0
-            yv = 0
-            break
+            xv = 0;
+            yv = 0;
+            break;
     }
 }
 setInterval(() => { 
-    tx += xv
-    ty += yv
-    if (tx + 160 > xm || tx < 0) xv = -xv
-    if (ty + 160 > ym || ty < 0) yv = -yv
-    tank.style.top = `${ty}px`
-    tank.style.left = `${tx}px`
-}, 100)
+    tx += xv;
+    ty += yv;
+    if (tx + 160 > xm || tx < 0) xv = -xv;
+    if (ty + 160 > ym || ty < 0) yv = -yv;
+    tank.style.top = `${ty}px`;
+    tank.style.left = `${tx}px`;
+}, 100);
