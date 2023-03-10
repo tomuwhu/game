@@ -1,47 +1,13 @@
-xm = window.innerWidth
-ym = window.innerHeight
-tx = xm / 2 - 50
-ty = ym - 150
-xv = 0
-yv = 0
-speed = 50
-function start(b) {
-    b.style.display = "none"
-    tank = document.getElementById("tank")
-    tank.style.display = "inline-block"
-    tank.style.position = "fixed"
-    tank.style.top = `${ty}px`
-    tank.style.left = `${tx}px`
-}
+nevek=["Lilcsi","Tesch","Roli","Patrik","Zsigi","Imó","Valentin","Dani","Zalán","Bende","Tomi","Philipp","Flóri","Abi","Lackó"]
+window.addEventListener("load", e => {
+    s = "<div class='c'>" + Array(15)
+            .fill(0)
+            .map((v, i) => `<div onclick="f(event)"><img src="pic/p${i}.jpg"><br>${nevek[i]}</div>`)
+            .join("") + "</div>"
+    document.getElementById("b1").innerHTML = s
+})
 function f(e) {
-    switch (e.key) {
-        case "ArrowRight":
-            xv = speed
-            yv = 0
-            break
-        case "ArrowLeft":
-            xv = -speed
-            yv = 0
-            break
-        case "ArrowUp":
-            yv = -speed
-            xv = 0
-            break
-        case "ArrowDown":
-            yv = speed
-            xv = 0
-            break
-        case " ":
-            xv = 0
-            yv = 0
-            break
-    }
+    x=e.target.getAttribute("src")
+    v=x.split(".")[0].substring(5)
+    document.getElementById("b1").innerHTML = `<img src="${x}"><br>`+nevek[v]
 }
-setInterval(() => { 
-    tx += xv
-    ty += yv
-    if (tx + 160 > xm) xv = -xv
-    if (tx < 0) xv = -xv
-    tank.style.top = `${ty}px`
-    tank.style.left = `${tx}px`
-}, 100)
