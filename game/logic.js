@@ -1,3 +1,17 @@
+nevek = ["Steven Howking","Yoda","Jack Sparrow","Einstein"]
+window.addEventListener("load", e => {
+    s = "<div class='c'>" + Array(4)
+            .fill(0)
+            .map((v, i) => `<div onclick="start(${i})"><img src="../pic/o${i}.pgj.png"><br>${nevek[i]}</div>`)
+            .join("") + "</div>";
+    document.getElementById("bsx").innerHTML = s;
+});
+function f(e) {
+    x=e.target.getAttribute("src");
+    v=x.split(".")[0].substring(5);
+    document.getElementById("b1").innerHTML = `<a href="game/"><img src="${x}"></a><br>`+nevek[v]
+}
+
 xm = window.innerWidth;
 ym = window.innerHeight;
 tx = xm / 2 - 50;
@@ -44,11 +58,4 @@ function f(e) {
             yv = 0;
             break;
     }
-}
-setTimeout(bs, 1000, 5);
-function bs(i) {
-    if (i > 0) {
-        document.getElementById("bsx").innerHTML = i;
-        setTimeout(bs, 1000, i - 1);
-    } else start();
 }

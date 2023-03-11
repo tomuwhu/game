@@ -1,3 +1,24 @@
+img {
+    border: solid 6px rgb(30, 16, 30);
+}
+div.c {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+}
+div.c div {
+    display: inline-block;
+    background-color: aquamarine;
+    margin: 6px;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px inset black;
+    cursor: pointer;
+}
+img:hover {
+    border: solid 6px purple;
+}
 body {
     user-select: none;
     background-color: rgb(205, 185, 185);
