@@ -1,5 +1,10 @@
 img {
-    border: solid 6px rgb(30, 16, 30);
+    width: 100px;
+    height: 100px;
+    background: fixed ;
+    border-radius: 10px;
+    box-shadow: 1px 1px 3px black;
+    border: solid 6px rgb(234, 203, 234);
 }
 div.c {
     width: 100%;

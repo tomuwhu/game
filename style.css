@@ -2,7 +2,7 @@ img {
     width: 100px;
     height: 100px;
     background: fixed ;
-    border: solid 5px pink;
+    border: solid 6px pink;
     border-radius: 10px;
     box-shadow: 1px 1px 3px black;
     cursor: pointer;

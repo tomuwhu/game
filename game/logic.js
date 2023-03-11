@@ -19,9 +19,10 @@ ty = ym - 150;
 xv = 0;
 yv = 0;
 speed = 50;
-function start() {
+function start(x) {
     document.getElementById("bsx").style.display = "none";
     tank = document.getElementById("tank");
+    tank.innerHTML = `<img src="../pic/o${x}.pgj.png">`;
     tank.style.display = "inline-block";
     tank.style.position = "fixed";
     tank.style.top = `${ty}px`;
