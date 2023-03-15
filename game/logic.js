@@ -92,7 +92,13 @@ function f(e) {
             st.appendChild(tn);
             g = document.createElement("div");
             g.className = "golyo";
-            g.style = `animation-name: g${ci};`
+            g.style = `animation-name: g${ci};background-color: rgb(${
+                Math.round(Math.random() * 200)
+            },${
+                Math.round(Math.random() * 200)
+            },${
+                Math.round(Math.random() * 200)
+            });`
             ci++;
             document.getElementById("body").appendChild(st);
             document.getElementById("body").appendChild(g);
