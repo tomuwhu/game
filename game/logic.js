@@ -50,10 +50,8 @@ function coll(el1, el2) {
     var rect1 = el1.getBoundingClientRect();
     var rect2 = el2.getBoundingClientRect();
     return !(
-      rect1.top > rect2.bottom ||
-      rect1.right < rect2.left ||
-      rect1.bottom < rect2.top ||
-      rect1.left > rect2.right
+      rect1.top > rect2.bottom || rect1.bottom < rect2.top ||
+      rect1.right < rect2.left || rect1.left > rect2.right
     );
 }
 function f(e) {
@@ -69,11 +67,11 @@ function f(e) {
         case "ArrowUp":
             yv = -speed;
             xv = 0;
-            break
+            break;
         case "ArrowDown":
             yv = speed;
             xv = 0;
-            break
+            break;
         case " ":
             xv = 0;
             yv = 0;
@@ -98,13 +96,14 @@ function f(e) {
             }, 1000, `g${ci}`)
             g.id = `g${ci}`;
             g.className = "golyo";
-            g.style = `animation-name: g${ci};background-color: rgb(${
-                Math.round(Math.random() * 200)
-            },${
-                Math.round(Math.random() * 200)
-            },${
-                Math.round(Math.random() * 200)
-            });`
+            g.style = `animation-name: g${ci};
+            background-color: rgb(${
+                    Math.round(Math.random() * 200)
+                },${
+                    Math.round(Math.random() * 200)
+                },${
+                    Math.round(Math.random() * 200)
+                });`;
             ci++;
             document.getElementById("body").appendChild(st);
             document.getElementById("body").appendChild(g);
