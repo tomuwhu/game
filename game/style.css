@@ -38,13 +38,14 @@ button {
     margin-top: 300px;
 }
 
-#golyo {
+#g1 {
     position: absolute;
     animation: g1 1s 1;
     box-shadow: 1px 1px 3px black;
-    background-color: black;
+    background-color: rgb(186, 8, 8);
     width: 20px;
     height: 20px;
+    border-radius: 10px;
     top: -30px;
     animation-timing-function: linear;
 }

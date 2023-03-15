@@ -71,7 +71,7 @@ function f(e) {
             }`)
             st.appendChild(tn)
             g = document.createElement("div");
-            g.id = "golyo";
+            g.id = `g1`;
             document.getElementById("body").appendChild(st)
             document.getElementById("body").appendChild(g)
             break;
