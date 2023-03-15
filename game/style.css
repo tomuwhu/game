@@ -38,11 +38,11 @@ button {
     margin-top: 300px;
 }
 
-#g1 {
+.golyo {
     position: absolute;
     animation: g1 1s 1;
     box-shadow: 1px 1px 3px black;
-    background-color: rgb(186, 8, 8);
+    background-color: rgb(255, 0, 0);
     width: 20px;
     height: 20px;
     border-radius: 10px;
@@ -59,4 +59,36 @@ button {
     background-color: blue;
     transition: 0.2s;
     transition-timing-function: linear;
+}
+
+#o1 {
+    display: none;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    background-color: aquamarine;
+    box-shadow: 1px 1px 3px black;
+    transition: 2s;
+    animation-name: a1;
+    position: absolute;
+    left: 50%;
+    top: 2%;
+    animation: a1 7s infinite;
+}
+
+@keyframes a1 {
+    0% {
+        left: 2%;
+        top: 2%;
+    }
+
+    50% {
+        left: 90%;
+        top: 2%;
+    }
+
+    100% {
+        left: 2%;
+        top: 2%;
+    }
 }
