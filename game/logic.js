@@ -79,6 +79,7 @@ function f(e) {
             yv = 0;
             st = document.createElement('style');
             st.type = "text/css";
+            st.id = `gg${ci}`;
             tn = document.createTextNode(`@keyframes g${ci} {
                 0% {
                     left: ${tx + 45}px;
@@ -91,6 +92,11 @@ function f(e) {
             }`);
             st.appendChild(tn);
             g = document.createElement("div");
+            setTimeout((id) => {
+                document.getElementById(id).remove()
+                document.getElementById("g" + id).remove()
+            }, 1000, `g${ci}`)
+            g.id = `g${ci}`;
             g.className = "golyo";
             g.style = `animation-name: g${ci};background-color: rgb(${
                 Math.round(Math.random() * 200)
