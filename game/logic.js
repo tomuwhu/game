@@ -18,7 +18,7 @@ tx = xm / 2 - 50;
 ty = ym - 150;
 xv = 0;
 yv = 0;
-speed = 50;
+speed = 20;
 function start(x) {
     document.getElementById("bsx").style.display = "none";
     tank = document.getElementById("tank");
@@ -34,7 +34,7 @@ function start(x) {
         if (ty + 160 > ym || ty < 0) yv = -yv;
         tank.style.top = `${ty}px`;
         tank.style.left = `${tx}px`;
-    }, 100);
+    }, 200);
 }
 function f(e) {
     switch (e.key) {
@@ -57,6 +57,23 @@ function f(e) {
         case " ":
             xv = 0;
             yv = 0;
+            st = document.createElement('style');
+            st.type = "text/css"
+            tn = document.createTextNode(`@keyframes g1 {
+                0% {
+                    left: ${tx + 45}px;
+                    top: ${ty}px;
+                }
+                100% {
+                    left: ${tx + 45}px;
+                    top: -20px;
+                }
+            }`)
+            st.appendChild(tn)
+            g = document.createElement("div");
+            g.id = "golyo";
+            document.getElementById("body").appendChild(st)
+            document.getElementById("body").appendChild(g)
             break;
     }
 }

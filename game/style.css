@@ -1,17 +1,19 @@
 img {
     width: 100px;
     height: 100px;
-    background: fixed ;
+    background: fixed;
     border-radius: 10px;
     box-shadow: 1px 1px 3px black;
     border: solid 6px rgb(234, 203, 234);
 }
+
 div.c {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     text-align: center;
 }
+
 div.c div {
     display: inline-block;
     background-color: aquamarine;
@@ -21,9 +23,11 @@ div.c div {
     box-shadow: 1px 1px 3px inset black;
     cursor: pointer;
 }
+
 img:hover {
     border: solid 6px purple;
 }
+
 body {
     user-select: none;
     background-color: rgb(205, 185, 185);
@@ -34,6 +38,17 @@ button {
     margin-top: 300px;
 }
 
+#golyo {
+    position: absolute;
+    animation: g1 1s 1;
+    box-shadow: 1px 1px 3px black;
+    background-color: black;
+    width: 20px;
+    height: 20px;
+    top: -30px;
+    animation-timing-function: linear;
+}
+
 #tank {
     display: none;
     width: 100px;
@@ -41,6 +56,6 @@ button {
     box-shadow: 1px 1px 4px black;
     border-radius: 5px;
     background-color: blue;
-    transition: 0.1s;
+    transition: 0.2s;
     transition-timing-function: linear;
 }
